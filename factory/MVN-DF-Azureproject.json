@@ -1,0 +1,15 @@
+{
+	"name": "MVN-DF-Azureproject",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "248f8b20-5e5e-4692-9e96-21f634837429",
+		"tenantId": "3aed1d78-dbac-41b4-8b25-5de3920d099f"
+	}
+}
