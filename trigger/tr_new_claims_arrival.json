@@ -1,0 +1,25 @@
+{
+	"name": "tr_new_claims_arrival",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_automate_health_claims",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/source/blobs/claims/",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/42c5d832-5f67-4d89-ba3f-732703f8b276/resourceGroups/RG-AzureProject/providers/Microsoft.Storage/storageAccounts/mvnazureproject",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

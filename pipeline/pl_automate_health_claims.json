@@ -1,0 +1,28 @@
+{
+	"name": "pl_automate_health_claims",
+	"properties": {
+		"activities": [
+			{
+				"name": "act_run_master_autoloader",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/mvn.saikiran@yahoo.com/Healthcare_Project/Master_Autoloader"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
